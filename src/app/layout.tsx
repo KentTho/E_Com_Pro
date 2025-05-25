@@ -12,17 +12,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-      <Navbar />
-      {children}
-      <Footer />
-      </body>
-    </html>
-  );
+                                       children,
+                                   }: {
+    children: React.ReactNode;
+}) {
+    return (
+        <html lang="en">
+            <body>
+            <Navbar />
+            {children}
+            <Footer />
+            </body>
+        </html>
+    );
 }
+

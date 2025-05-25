@@ -1,5 +1,6 @@
 "use client"
 import { Search } from 'lucide-react';
+import {useRouter} from "next/navigation";
 
 
 
@@ -7,7 +8,7 @@ import { Search } from 'lucide-react';
 const SearchBar = () => {
 
 
-
+    const router = useRouter();
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>)=> {
         e.preventDefault();
@@ -15,6 +16,9 @@ const SearchBar = () => {
     const name = formData.get("name") as string;
 
 
+    if(name){
+        router.push(`/list?name=${name}`)
+    }
     }
 
     return (

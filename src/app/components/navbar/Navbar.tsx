@@ -5,6 +5,7 @@ import Link from "next/link";
 import {Button} from "@/app/components/ui/button";
 import SearchBar from "@/app/components/navbar/SearchBar";
 import {CircleUserRound} from "lucide-react";
+import NavbarIcon from "@/app/components/navbar/NavbarIcon";
 
 const Navbar = () => {
     return (
@@ -23,14 +24,16 @@ const Navbar = () => {
 
                         <SearchBar />
 
-                        <Link href="/login">
-                            <Button
-                                variant="outline"
-                                className="rounded-full p-2 h-auto text-sm transition duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500 hover:text-blue-600 hover:shadow-md"
-                            >
-                                <CircleUserRound className="w-5 h-5" />
-                            </Button>
-                        </Link>
+                        <NavbarIcon />
+
+                        {/*<Link href="/login">*/}
+                        {/*    <Button*/}
+                        {/*        variant="outline"*/}
+                        {/*        className="rounded-full p-2 h-auto text-sm transition duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500 hover:text-blue-600 hover:shadow-md"*/}
+                        {/*    >*/}
+                        {/*        <CircleUserRound className="w-5 h-5" />*/}
+                        {/*    </Button>*/}
+                        {/*/!*</Link>*!/*/}
                         {/*<Link href="/contact-us">*/}
                         {/*    <Button*/}
                         {/*        className="rounded-full px-4 py-1 h-auto text-sm bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg"*/}
