@@ -105,7 +105,7 @@ const NavbarIcon = () => {
 
                         {/* Menu phụ nếu đã đăng nhập */}
                         {isLoggedIn && isProfileOpen && (
-                            <div className="absolute left-full top-0 ml-2 flex flex-col gap-2 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white border rounded-xl shadow-2xl z-50 min-w-[160px] p-2">
+                            <div className="absolute left-3/4 top-0 ml-2 flex flex-col gap-2 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white border rounded-xl shadow-2xl z-50 min-w-[130px] p-2">
                                 {/* Profile */}
                                 <Link href="/profile" className="w-full">
                                     <Button

@@ -22,8 +22,9 @@ const SearchBar = () => {
     }
 
     return (
-        <form onSubmit={handleSearch}
-            className="px-2.5 py-0 w-[40px] h-[40px] hover:w-[220px] bg-white shadow-md border border-gray-300 rounded-full flex group items-center transition-all duration-300"
+        <form
+            onSubmit={handleSearch}
+            className="group px-2.5 py-0 w-[40px] h-[40px] bg-white shadow-md border border-gray-300 rounded-full flex items-center transition-all duration-300 hover:w-[220px]"
         >
             <button
                 type="submit"
@@ -35,9 +36,10 @@ const SearchBar = () => {
                 name="name"
                 type="text"
                 placeholder="Search..."
-                className="outline-none text-[16px] bg-transparent w-full text-black font-normal px-3"
+                className="ml-2 opacity-0 w-0 group-hover:opacity-100 group-hover:w-full transition-all duration-300 outline-none text-[16px] bg-transparent text-black font-normal"
             />
         </form>
+
     )
 }
 
