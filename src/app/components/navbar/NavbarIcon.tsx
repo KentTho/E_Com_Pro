@@ -82,31 +82,33 @@ const NavbarIcon = () => {
             {isMainMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="absolute left-full top-[60px] -translate-y-1/2 ml-8 flex flex-col items-start gap-2 transition-all duration-300 ease-in-out z-50 bg-white p-2 rounded-xl min-w-44"
+                    className="absolute left-full top-[60px] -translate-y-1/2 ml-8 flex flex-col gap-2 transition-all duration-300 ease-in-out z-50 p-2 rounded-xl min-w-44 items-center bg-white/60 backdrop-blur-sm text-gray-800"
                 >
-                    {/* Thông báo */}
+                    {/* Notifications */}
                     <Link href="/notifications">
                         <Button variant="outline" className={baseClass}>
                             <Bell className="w-150 h-150" />
-                            <span>{"Notifications"}</span>
+                            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Notifications
+        </span>
                         </Button>
                     </Link>
 
-                    {/* User / Profile */}
-                    <div className="relative w-full">
+                    {/* Account / Log In — đặt ở giữa */}
+                    <div className="relative">
                         <Button
                             variant="outline"
-                            className={baseClass + " w-3/4 justify-start"}
+                            className={baseClass}
                             onClick={handleProfileClick}
                         >
                             <User className="w-150 h-150 mr-2" />
-                            <span>{isLoggedIn ? "Account" : "Log In"}</span>
+                            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          {isLoggedIn ? "Account" : "Log In"}
+        </span>
                         </Button>
 
-                        {/* Menu phụ nếu đã đăng nhập */}
                         {isLoggedIn && isProfileOpen && (
-                            <div className="absolute left-3/4 top-0 ml-2 flex flex-col gap-2 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white border rounded-xl shadow-2xl z-50 min-w-[130px] p-2">
-                                {/* Profile */}
+                            <div className="absolute left-full top-0 ml-3 flex flex-col gap-2 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white border rounded-xl shadow-2xl z-50 min-w-[130px] p-2">
                                 <Link href="/profile" className="w-full">
                                     <Button
                                         variant="ghost"
@@ -117,7 +119,6 @@ const NavbarIcon = () => {
                                     </Button>
                                 </Link>
 
-                                {/* Logout */}
                                 <Button
                                     onClick={handleLogout}
                                     variant="ghost"
@@ -130,7 +131,7 @@ const NavbarIcon = () => {
                         )}
                     </div>
 
-                    {/* Giỏ hàng */}
+                    {/* Cart — dời xuống cuối */}
                     <CartDropdown />
                 </div>
             )}

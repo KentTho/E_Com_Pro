@@ -41,7 +41,7 @@ const CartDropdown = () => {
                 onClick={() => setIsCartOpen((prev) => !prev)}
             >
                 <ShoppingCart className="w-150 h-150" />
-                <span>{"Cart"}</span>
+                <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">{"Cart"}</span>
                 <span className="ml-1 bg-[#F35C7A] text-white text-xs rounded-full px-2">
                   {cartQuantity}
                 </span>
