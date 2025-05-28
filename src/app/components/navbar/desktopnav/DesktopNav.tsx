@@ -14,7 +14,7 @@ const DesktopNav = () => {
             <NavigationMenuList className="flex items-center space-x-2 text-sm font-medium">
                 <NavigationMenuItem>
                     <Link
-                        href="/"
+                        href="/public"
                         className="px-4 py-1 rounded-full transition-colors hover:bg-black hover:text-white text-muted-foreground"
                     >
                         Home

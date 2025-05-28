@@ -12,10 +12,11 @@ import {
 } from "@/app/components/ui/sheet";
 import { Menu } from "lucide-react";
 import NavbarIcon from "@/app/components/navbar/NavbarIcon";
+import MoblieNavIcon from "@/app/components/navbar/moblienav/MoblieNavIcon";
+
 
 const MobileNav = () => {
     const [open, setOpen] = React.useState(false);
-
     return (
         <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -37,20 +38,8 @@ const MobileNav = () => {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
                     <div className="grid gap-2">
-                        {/*<Link href="/login">*/}
-                        {/*    <Button*/}
-                        {/*        variant="outline"*/}
-                        {/*        className="w-full rounded-full px-4 py-1 h-auto text-sm transition duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500 hover:text-blue-600 hover:shadow-md"*/}
-                        {/*        onClick={() => setOpen(false)}*/}
-                        {/*    >*/}
-                        {/*        Log in*/}
-                        {/*    </Button>*/}
-                        {/*</Link>*/}
-                        {/*<Button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600 shadow-md hover:shadow-lg" onClick={() => setOpen(false)}>*/}
-                        {/*    Sign up*/}
-                        {/*</Button>*/}
                         <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
-                            <NavbarIcon />
+                            <MoblieNavIcon />
                         </div>
                     </div>
                 </div>

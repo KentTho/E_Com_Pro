@@ -86,30 +86,20 @@ const Slider = () => {
                     </div>
                 ))}
             </div>
-            <div className="absolute m-auto left-1/2 bottom-8 flex gap-4">
+            <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 md:gap-4">
                 {
                     slides.map((slide, index) => (
-                        <div className={`w-3 h-3 rounded-full ring-1 from-blue-500 via-purple-500 to-pink-500 cursor-pointer flex items-center justify-center ${
+                        <div className={`w-2 h-2 md:w-3 md:h-3 rounded-full ring-1 from-blue-500 via-purple-500 to-pink-500 cursor-pointer flex items-center justify-center ${
                             current === index ? "scale-150" : ""
                         }`}
-                             key = {slide.id}
+                             key={slide.id}
                              onClick={() => setCurrent(index)}
                         >
-                            {current === index && (<div className="w-[6px] h-[6px] bg-gray-600 rounded-full"></div> )}
+                            {current === index && (<div className="w-[4px] h-[4px] md:w-[6px] md:h-[6px] bg-gray-600 rounded-full"></div>)}
                         </div>
-                        ))
+                    ))
                 }
             </div>
-            {/*/!* Dot navigation *!/*/}
-            {/*<div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">*/}
-            {/*    {slides.map((_, index) => (*/}
-            {/*        <button*/}
-            {/*            key={index}*/}
-            {/*            className={`w-3 h-3 rounded-full ${index === current ? "bg-black" : "bg-gray-400"} transition-all`}*/}
-            {/*            onClick={() => setCurrent(index)}*/}
-            {/*        />*/}
-            {/*    ))}*/}
-            {/*</div>*/}
         </div>
     )
 }

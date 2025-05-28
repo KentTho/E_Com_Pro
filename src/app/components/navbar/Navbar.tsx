@@ -1,6 +1,6 @@
 import Logo from "@/app/components/logo";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+import DesktopNav from "./desktopnav/DesktopNav";
+import MobileNav from "./moblienav/MobileNav";
 import SearchBar from "@/app/components/navbar/SearchBar";
 import NavbarIcon from "@/app/components/navbar/NavbarIcon";
 
